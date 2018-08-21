@@ -1,16 +1,18 @@
 package SmartHome;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SterownikPieca {
 
     private boolean isOn;
     private String info;
 
-    public SterownikPieca (StacjaPogodowa pogoda){
-        if (pogoda.getTemperature()<15) {
+    public SterownikPieca(StacjaPogodowa pogoda) {
+        if (pogoda.getTemperature() < 15) {
             this.isOn = true;
             this.info = "Jest zimno, uruchamiam piec";
-        }
-        else {
+        } else {
             this.isOn = false;
             this.info = "Jest ciepło, nie uruchamiam pieca";
         }
@@ -20,15 +22,8 @@ public class SterownikPieca {
         return isOn;
     }
 
-    public void setOn(boolean on) {
-        isOn = on;
+    public void run() {
+        System.out.println(info);
     }
 
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
 }

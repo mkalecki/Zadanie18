@@ -1,5 +1,7 @@
 package SmartHome;
 
+import org.springframework.stereotype.Component;
+
 public enum OpisPogody {
     POCHMURNO("jest pochmurno"),
     CZESCZACHM("niebo jest częściowo zachmurzone"),

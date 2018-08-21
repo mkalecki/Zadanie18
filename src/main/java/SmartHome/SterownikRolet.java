@@ -1,5 +1,8 @@
 package SmartHome;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SterownikRolet {
 
     private boolean closed;
@@ -20,15 +23,10 @@ public class SterownikRolet {
         return closed;
     }
 
-    public void setClosed(boolean closed) {
-        this.closed = closed;
+
+    public void run() {
+        System.out.println(info);
     }
 
-    public String getInfo() {
-        return info;
-    }
 
-    public void setInfo(String info) {
-        this.info = info;
-    }
 }

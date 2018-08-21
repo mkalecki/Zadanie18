@@ -1,19 +1,19 @@
 package SmartHome;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SterownikGlosnika {
 
-    private String komunikat;
+    private StacjaPogodowa stacjaPogodowa;
 
     public SterownikGlosnika(StacjaPogodowa pogoda){
-        komunikat = "Dzień dobry. Dzisiejsza temperatura to " + pogoda.getTemperature() +
-                "*C, " + pogoda.getOpisPogody();
+        stacjaPogodowa = pogoda;
     }
 
-    public String getKomunikat() {
-        return komunikat;
+    public void run() {
+        System.out.println("Dzień dobry. Dzisiejsza temperatura to " + stacjaPogodowa.getTemperature() +
+                "*C, " + stacjaPogodowa.getOpisPogody());
     }
 
-    public void setKomunikat(String komunikat) {
-        this.komunikat = komunikat;
-    }
 }

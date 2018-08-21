@@ -1,7 +1,10 @@
 package SmartHome;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
+@Component
 public class StacjaPogodowa {
     private int temperature;
     private OpisPogody opisPogody;
@@ -18,26 +21,16 @@ public class StacjaPogodowa {
             this.opisPogody = OpisPogody.CZESCZACHM;
         if (x==2)
             this.opisPogody = OpisPogody.POCHMURNO;
-
+        System.out.println("pobieram infermacje o pogodzie..." );
     }
 
     public int getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
-    }
-
     public OpisPogody getOpisPogody() {
         return opisPogody;
     }
-
-    public void setOpisPogody(OpisPogody description) {
-        this.opisPogody = description;
-    }
-
-//    }
 
     public String info (){
         return "pobieram informacje o pogodzie... ";
